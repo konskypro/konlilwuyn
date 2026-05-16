@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopKun</title>
+  <style>
+    body{
+      margin:0;
+      font-family:Arial;
+      background:linear-gradient(135deg,#111827,#2563eb);
+      color:white;
+    }
+    header{
+      padding:20px;
+      text-align:center;
+      background:rgba(0,0,0,.2);
+    }
+    .box{
+      max-width:400px;
+      margin:60px auto;
+      background:white;
+      color:#111;
+      padding:25px;
+      border-radius:18px;
+    }
+    input,button{
+      width:100%;
+      padding:14px;
+      margin-top:12px;
+      border-radius:10px;
+      border:1px solid #ccc;
+    }
+    button{
+      background:#2563eb;
+      color:white;
+      border:none;
+      font-weight:bold;
+    }
+    .result{
+      margin-top:15px;
+      background:#f3f4f6;
+      padding:10px;
+      border-radius:10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ShopKun</h1>
+  <p>Web HTML CSS JS</p>
+</header>
+
+<div class="box">
+  <h2>Đăng nhập</h2>
+
+  <input id="user" placeholder="Tên đăng nhập">
+  <input id="pass" type="password" placeholder="Mật khẩu">
+
+  <button onclick="login()">Đăng nhập</button>
+
+  <div id="result" class="result"></div>
+</div>
+
+<script>
+function login(){
+  let u=document.getElementById("user").value;
+  let p=document.getElementById("pass").value;
+
+  if(u==="admin" && p==="123456"){
+    document.getElementById("result").innerHTML="✅ Đăng nhập thành công";
+  }else{
+    document.getElementById("result").innerHTML="❌ Sai tài khoản";
+  }
+}
+</script>
+
+</body>
+</html>
